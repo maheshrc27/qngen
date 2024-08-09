@@ -1,0 +1,13 @@
+package components
+
+templ Uploader(title string) {
+    @Htmlwrapper(title) {
+        <div class="">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="pdf">Select PDF:</label>
+                <input id="pdf_file" type="file" name="file" required />
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+    }
+}
