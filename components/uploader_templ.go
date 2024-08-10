@@ -38,7 +38,7 @@ func Uploader(title string) templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"\"><form action=\"/upload\" method=\"POST\" enctype=\"multipart/form-data\"><label for=\"pdf\">Select PDF:</label> <input id=\"pdf_file\" type=\"file\" name=\"file\" required> <button type=\"submit\">Generate</button></form></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"w-full py-12 px-6\"><div class=\"max-w-screen-md mx-auto\"><h1 class=\"font-bold font-4xl\">Generate Important Questions from PDF</h1><div class=\"py-5\"><form action=\"/upload\" method=\"POST\" enctype=\"multipart/form-data\"><label for=\"pdf\">Select PDF:</label> <input id=\"pdf_file\" type=\"file\" name=\"file\" required> <button type=\"submit\" class=\"px-3 py-2 text-white font-semibold rounded bg-sky-600 hover:bg-sky-500\">Generate</button></form></div></div></section>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

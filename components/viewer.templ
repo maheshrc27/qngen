@@ -1,0 +1,22 @@
+package components
+
+type Question struct {
+	Question      string   `json:"question"`
+	Explanation   string   `json:"explanation"`
+}
+
+templ Viewer(title string, questions []Question) {
+    @Htmlwrapper(title) {
+        <section class="w-full py-12 px-6">
+            <div class="max-w-screen-lg mx-auto h-auto mt-8">
+                <h2 class="font-bold text-3xl">Generated Questions</h2>
+                for _, q:= range questions {
+                    <div class="mt-8">
+                        <h3 class="font-bold text-lg">{q.Question}</h3>
+                        <p class="mt-3 text-md font-normal">{q.Explanation}</p>
+                    </div>
+                }
+            </div>
+        </section>
+    }
+}
